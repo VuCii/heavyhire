@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heavy Duty Equipment Rental</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<nav>
+    <!-- Search Bar -->
+
+
+<ul class="nav-menu">
+    <div class="logo-container">
+        <!-- Logo Image and Company Name -->
+        <img src="./images/logo.png" alt="Heavy Take Logo" class="logo">
+        <span class="company-name">Heavy Take</span>
+    </div>  
+    
+    <li><a href="Home.html">Home</a></li>
+    <li><a href="catalog.html">Equipment Catalogue</a></li>
+    <li><a href="account.html">User Account</a></li>
+    <li><a href="booking.html">Booking</a></li>
+    <li><a href="services.html">Our Services</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+  
+</ul>
+</nav>
+
+
+<div class="Container">
+
+    
+    <section id="home" class="banner">
+        
+        <h1>Reserve Equipment For Another Day</h1>
+        <p>Reserve your Equipment with simple easy steps and we will Return your responce within 24hrz </p>
+
+       
+    </section>
+</div>
+<div class="container">
+<section id="booking" class="booking-form">
+    <h2>Booking/Reservation</h2>
+    <form>
+        <!-- Step 1: Contact Information -->
+        <fieldset>
+            <legend>Contact Information</legend>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone">
+        </fieldset>
+
+        <!-- Step 2: Rental Details -->
+        <fieldset>
+            <legend>Rental Details</legend>
+            
+            <label for="rental-period">Rental Period:</label>
+            <input type="text" id="rental-period" name="rental-period" placeholder="e.g., July 1 - July 7" required>
+            
+            <label for="pick-up-date">Pick-Up Date:</label>
+            <input type="date" id="pick-up-date" name="pick-up-date" required>
+            
+            <label for="drop-off-date">Drop-Off Date:</label>
+            <input type="date" id="drop-off-date" name="drop-off-date" required>
+            
+            <label for="vehicle-type">Type of Vehicle:</label>
+            <select id="vehicle-type" name="vehicle-type" required>
+                <option value="" disabled selected>Select a vehicle</option>
+                <option value="excavator">Excavator</option>
+                <option value="bulldozer">Bulldozer</option>
+                <option value="crane">Crane</option>
+                <option value="loader">Loader</option>
+            </select>
+        </fieldset>
+        
+        <!-- Step 3: Additional Options -->
+        <fieldset>
+            <legend>Additional Options</legend>
+            
+            <label for="extras">Extras:</label>
+            <input type="checkbox" id="insurance" name="extras" value="Insurance">
+            <label for="insurance">Insurance</label>
+            
+            <input type="checkbox" id="operator" name="extras" value="Operator">
+            <label for="operator">Operator</label>
+        </fieldset>
+        
+        <!-- Step 4: Payment Information -->
+        <fieldset>
+            <legend>Payment Information</legend>
+            
+            <label for="payment-method">Payment Method:</label>
+            <select id="payment-method" name="payment-method" required>
+                <option value="" disabled selected>Select payment method</option>
+                <option value="credit-card">Credit Card</option>
+                <option value="paypal">PayPal</option>
+            </select>
+            
+            <div id="credit-card-info" style="display: none;">
+                <label for="credit-card-number">Credit Card Number:</label>
+                <input type="text" id="credit-card-number" name="credit-card-number">
+                
+                <label for="expiry-date">Expiry Date:</label>
+                <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY">
+                
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv">
+            </div>
+            
+            <div id="paypal-info" style="display: none;">
+                <label for="paypal-email">PayPal Email:</label>
+                <input type="email" id="paypal-email" name="paypal-email">
+            </div>
+        </fieldset>
+        
+        <!-- Step 5: Confirmation -->
+        <fieldset>
+            <legend>Confirmation</legend>
+            
+            <p>Please review your information before submitting:</p>
+            
+            <button type="submit">Reserve</button>
+        </fieldset>
+    </form>
+    
+    <script>
+        document.getElementById('payment-method').addEventListener('change', function() {
+            var creditCardInfo = document.getElementById('credit-card-info');
+            var paypalInfo = document.getElementById('paypal-info');
+            if (this.value === 'credit-card') {
+                creditCardInfo.style.display = 'block';
+                paypalInfo.style.display = 'none';
+            } else if (this.value === 'paypal') {
+                creditCardInfo.style.display = 'none';
+                paypalInfo.style.display = 'block';
+            }
+        });
+    </script>
+</section>
+</div>
+</html>
+
+<style>
+    /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px; /* Adjust logo size */
+    height: auto;
+    margin-right: 10px; /* Space between logo and company name */
+}
+
+.company-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333; /* Adjust the color as needed */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: #fd0d0d;
+    padding: 10px 20px;
+    position: relative;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-menu li {
+    margin: 0 15px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-menu a:hover {
+    background-color: #0056b3;
+    color: #f8f9fa;
+}
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+.Container {
+    background-image: url("images/bulldozer-5558681.jpg"); /* Replace with your image URL */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    width: 100%; /* Full width of the section */
+    height: 50vh; /* Full height of the viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Text color to contrast with the background */
+    text-align: center;
+}
+/* Header Styles */
+header {
+    background-color:#ff0000c0;
+    padding: 10px 20px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Booking Form Styles */
+.booking-form {
+   
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.booking-form h2 {
+    text-align: center;
+    color:#ff0000c0;
+    margin-bottom: 20px;
+}
+
+.booking-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset {
+    border: 1px solid #ff0000c0;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+legend {
+    padding: 0 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color:#ff0000c0;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    color: #333;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+button[type="submit"] {
+    padding: 12px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #ff0000c0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #ff0000c0;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .booking-form form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    fieldset {
+        grid-column: span 2;
+    }
+
+    .booking-form form > fieldset:nth-of-type(1),
+    .booking-form form > fieldset:nth-of-type(2) {
+        grid-column: span 1;
+    }
+}
+
+</style>

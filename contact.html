@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heavy Duty Equipment Rental</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="catalog.html">Equipment Catalogue</a></li>
+              
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="booking.html">Our Services</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <!-- User Account Management -->
+  
+       
+   
+        </nav>
+    </header>
+    <div class="Container">
+
+
+    </div>
+    <div class="container">
+<section id="contact" class="contact-us">
+    <h2>Contact Us</h2>
+    <form>
+        <!-- Personal Information -->
+        <fieldset>
+            <legend>Personal Information</legend>
+            
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone">
+        </fieldset>
+
+        <!-- Message Information -->
+        <fieldset>
+            <legend>Your Message</legend>
+            
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+        </fieldset>
+
+        <!-- Contact Preferences -->
+        <fieldset>
+            <legend>Contact Preferences</legend>
+            
+            <label for="preferred-contact-method">Preferred Contact Method:</label>
+            <select id="preferred-contact-method" name="preferred-contact-method" required>
+                <option value="" disabled selected>Select a method</option>
+                <option value="email">Email</option>
+                <option value="phone">Phone</option>
+            </select>
+            
+            <div id="phone-contact-info" style="display: none;">
+                <label for="preferred-contact-time">Preferred Contact Time:</label>
+                <input type="text" id="preferred-contact-time" name="preferred-contact-time" placeholder="e.g., 9 AM - 5 PM">
+            </div>
+        </fieldset>
+
+        <!-- Privacy Agreement -->
+        <fieldset>
+            <legend>Privacy Agreement</legend>
+            
+            <input type="checkbox" id="privacy-agreement" name="privacy-agreement" required>
+            <label for="privacy-agreement">I agree to the <a href="#privacy-policy" target="_blank">privacy policy</a></label>
+        </fieldset>
+
+        <!-- Submit Button -->
+        <fieldset>
+            <button type="submit">Send Message</button>
+        </fieldset>
+    </form>
+
+    <!-- Map Section -->
+    <fieldset>
+        <legend>Our Location</legend>
+        <div id="map" style="height: 400px; width: 100%;"></div>
+    </fieldset>
+</section>
+    </div>
+</html>
+<style>
+    .contact-us {
+ 
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+.Container {
+    background-image: url("images/bulldozer-5558681.jpg"); /* Replace with your image URL */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    width: 100%; /* Full width of the section */
+    height: 50vh; /* Full height of the viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Text color to contrast with the background */
+    text-align: center;
+}
+
+.contact-us h2 {
+    text-align: center;
+    color:#ff0000c0;
+    margin-bottom: 20px;
+}
+
+.contact-us form {
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset {
+    border: 1px solid #ff0000c0;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+legend {
+    padding: 0 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ff0000c0;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    color: #333;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+button[type="submit"] {
+    padding: 12px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #ff0000c0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #ff0000c0;
+}
+
+#map {
+    margin-top: 20px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .contact-us form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    fieldset {
+        grid-column: span 2;
+    }
+
+    .contact-us form > fieldset:nth-of-type(1),
+    .contact-us form > fieldset:nth-of-type(2) {
+        grid-column: span 1;
+    }
+}
+
+</style>

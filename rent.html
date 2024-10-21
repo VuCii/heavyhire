@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent Now - Equipment Rental</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+         
+    <nav>
+        <!-- Search Bar -->
+
+   
+    <ul class="nav-menu">
+        <div class="logo-container">
+            <!-- Logo Image and Company Name -->
+            <img src="path-to-your-logo.png" alt="Heavy Take Logo" class="logo">
+            <span class="company-name">Heavy Take</span>
+        </div>  
+        
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="catalog.html">Equipment Catalogue</a></li>
+        <li><a href="account.html">User Account</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="services.html">Our Services</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      
+    </ul>
+</nav>
+   
+        <div class="item-info">
+            <h3>Excavator</h3>
+            <p>Comprehensive information about the equipment.</p>
+           
+           
+        </div>
+        
+        <div class="rent-now-container">
+            <!-- Selected Item Details -->
+            <div class="item-details">
+                <img src="./images/ayumi-kubo-0Gtpeql_c8A-unsplash.jpg" alt="Selected Equipment Image">
+               
+                <p>Rental Price: ZAR 3,000/day</p>
+                <p>
+                    Number of Days: 
+                    <input type="number" id="days" value="1" min="1" onchange="calculateTotal()">
+                </p>
+            </div>
+            
+            <!-- Payment Section -->
+            <div class="payment-section">
+                <h3>Payment Gateway</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="card-number">Card Number:</label>
+                        <div class="input-icon">
+                            <i class="fas fa-credit-card"></i>
+                            <input type="text" id="card-number" placeholder="       1234 5678 9012 3456">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="expiry-date">Expiry Date:</label>
+                        <div class="input-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                            <input type="text" id="expiry-date" placeholder="      MM/YY">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="cvv">CVV:</label>
+                        <div class="input-icon">
+                            <i class="fas fa-lock"></i>
+                            <input type="text" id="cvv" placeholder="     123">
+                        </div>
+                    </div>
+                    <p><strong>Total Price: ZAR <span id="total-price">3000</span></strong></p>
+                    
+                    <button type="submit" class="pay-btn">
+                        <i class="fas fa-shopping-cart"></i> Pay Now
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+        function calculateTotal() {
+    var pricePerDay = 3000; // Rental price per day
+    var days = document.getElementById("days").value;
+    var totalPrice = pricePerDay * days;
+    document.getElementById("total-price").innerText = totalPrice;
+}
+
+    </script>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Equipment Rental. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+<style>
+    .search-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+   
+}
+
+.search-container input[type="text"] {
+    border: none;
+    padding: 5px;
+    font-size: 16px;
+    outline: none;
+    width: 200px; /* Adjust width */
+}
+
+.search-container button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.search-container button i {
+    font-size: 18px;
+    color: #ffffff; /* Search icon color */
+}
+
+/* Align the search bar to the right of the logo container */
+.search-container {
+    margin-left: auto;
+}
+
+/* Optional: Style Font Awesome icons */
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px; /* Adjust logo size */
+    height: auto;
+    margin-right: 10px; /* Space between logo and company name */
+}
+
+.company-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333; /* Adjust the color as needed */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: #fd0d0d;
+    padding: 10px 20px;
+    position: relative;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-menu li {
+    margin: 0 15px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-menu a:hover {
+    background-color: #0056b3;
+    color: #f8f9fa;
+}
+    /* Global Styles */
+
+#rent-now {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 900px;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.rent-now-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.item-details img {
+    width: 80%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.item-info h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.item-info p {
+    color: #777;
+}
+
+input[type="number"] {
+    padding: 5px;
+    width: 60px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Payment Section */
+.payment-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+}
+
+.payment-section h3 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    color: #333;
+    font-weight: bold;
+}
+
+.input-icon {
+    position: relative;
+}
+
+.input-icon i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+}
+
+input[type="text"] {
+    padding-left: 40px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.pay-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.pay-btn:hover {
+    background-color: #218838;
+}
+
+.pay-btn i {
+    margin-right: 8px;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 10px;
+    font-size: 14px;
+    color: #555;
+    width: 100%;
+}
+
+</style>

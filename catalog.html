@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipment List</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+   
+    <nav>
+        <!-- Search Bar -->
+
+   
+    <ul class="nav-menu">
+        <div class="logo-container">
+            <!-- Logo Image and Company Name -->
+            <img src="./images/logo.png" alt="Heavy Take Logo" class="logo">
+            <span class="company-name">Heavy Take</span>
+        </div>  
+        
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="catalog.html">Equipment Catalogue</a></li>
+      
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="services.html">Our Services</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      
+    </ul>
+</nav>
+   
+
+            <header class="header">
+                <input type="text" id="search" placeholder="Search equipment">
+                <div class="filters">
+                    <label for="category-filter">Category:</label>
+                    <select id="category-filter">
+                        <option value="">All</option>
+                        <option value="excavator">Excavator</option>
+                        <option value="bulldozer">Bulldozer</option>
+                        <option value="loader">Loader</option>
+                        <option value="crane">Crane</option>
+                        <option value="dump-truck">Dump Truck</option>
+                        <option value="compactor">Compactor</option>
+                        <option value="generator">Generator</option>
+                        <option value="scaffolding">Scaffolding</option>
+                        <option value="concrete">Concrete Equipment</option>
+                        <option value="earthmoving">Earthmoving Equipment</option>
+                    </select>
+                </div>
+                <button id="toggle-view"><i class="fas fa-th"></i> Grid View</button>
+            </header>
+            
+            <div id="equipment-list" class="list-view">
+                <!-- Example Equipment Items -->
+                <div class="equipment-item" data-category="excavator">
+                    <img src="images/bulldozer-5558681.jpg" alt="Excavator">
+                    <p><strong>Mini Excavator</strong> - ZAR 2,500/day</p>
+                    <button onclick="rentNow('Mini Excavator', '2500', 'images/bulldozer-5558681.jpg')">
+                        <i class="fas fa-shopping-cart"></i> Rent Now
+                    </button>
+                </div>
+                <div class="equipment-item" data-category="bulldozer">
+                    <img src="images/bulldozer-5558681.jpg" alt="Bulldozer">
+                    <p><strong>Crawler Bulldozer</strong> - ZAR 4,000/day</p>
+                    <button onclick="rentNow('Mini Excavator', '2500', '/images\istockphoto-1768725228-612x612.jpg')">
+                        <i class="fas fa-shopping-cart"></i> Rent Now
+                    </button>
+                </div>
+                <div class="equipment-item" data-category="excavator">
+                    <img src="images\istockphoto-466924569-612x612.jpg" alt="Excavator">
+                    <p>Mini Excavator - ZAR 2,500/day</p>
+                    <button onclick="rentNow('Mini Excavator', '2500', 'images/bulldozer-5558681.jpg')">
+                        <i class="fas fa-shopping-cart"></i> Rent Now
+                    </button>
+                
+                </div>
+                
+                <div class="equipment-item" data-category="excavator">
+                    <img src="./images/istockphoto-1060428268-612x612.jpg" alt="Excavator">
+                    <p>Standard Excavator - ZAR 3,500/day</p>
+                    <button onclick="rentNow('Mini Excavator', '2500', 'images/bulldozer-5558681.jpg')">
+                        <i class="fas fa-shopping-cart"></i> Rent Now
+                    </button>
+                </div>
+                
+                <!-- Bulldozers -->
+                <div class="equipment-item" data-category="bulldozer">
+                    <img src="./images/istockphoto-1196245842-612x612.jpg" alt="Bulldozer">
+                    <p>Crawler Bulldozer - ZAR 4,000/day</p>
+                    <button onclick="rentNow('Mini Excavator', '2500', 'images/bulldozer-5558681.jpg')">
+                        <i class="fas fa-shopping-cart"></i> Rent Now
+                    </button>
+                </div>
+                <div class="equipment-item" data-category="bulldozer">
+                    <img src="img/bulldozer.jpg" alt="Bulldozer">
+                    <p>Wheel Bulldozer - ZAR 4,800/day</p>
+                    <button onclick="rentNow('Mini Excavator', '2500', 'images/bulldozer-5558681.jpg')">
+                        <i class="fas fa-shopping-cart"></i> Rent Now
+                    </button>
+                </div>
+                
+                <!-- Loaders -->
+                <div class="equipment-item" data-category="loader">
+                    <img src="images/ayumi-kubo-0Gtpeql_c8A-unsplash.jpg" alt="Loader">
+                    <p>Skid Steer Loader - ZAR 2,800/day</p>
+                    <button onclick="rentNow('Mini Excavator', '2500', 'images/bulldozer-5558681.jpg')">
+                        <i class="fas fa-shopping-cart"></i> Rent Now
+                    </button>
+                </div>
+                <div class="equipment-item" data-category="loader">
+                    <img src="./images/Wheel bulldozer.jpg" alt="Loader">
+                    <p>Wheel Loader - ZAR 3,600/day</p>
+                    <button onclick="rentNow('Mini Excavator', '2500', 'images/bulldozer-5558681.jpg')">
+                        <i class="fas fa-shopping-cart"></i> Rent Now
+                    </button>
+                </div>
+                
+                <!-- Cranes -->
+                <div class="equipment-item" data-category="crane">
+                    <img src="images\istockphoto-1768725228-612x612.jpg" alt="Crane">
+                    <p>Mobile Crane - ZAR 5,500/day</p>
+                    <button onclick="rentNow('Mini Excavator', '2500', 'images/bulldozer-5558681.jpg')">
+                        <i class="fas fa-shopping-cart"></i> Rent Now
+                    </button>
+                </div>
+                <div class="equipment-item" data-category="crane">
+                    <img src=".\images\istockphoto-187164792-612x612.jpg" alt="Crane">
+                    <p>Tower Crane - ZAR 7,000/day</p>
+                    <button onclick="rentNow('Mini Excavator', '2500', 'images/bulldozer-5558681.jpg')">
+                        <i class="fas fa-shopping-cart"></i> Rent Now
+                    </button>
+                </div>
+                
+                <!-- Dump Trucks -->
+                <div class="equipment-item" data-category="dump-truck">
+                    <img src="./images/istockphoto-500217175-612x612.jpg" alt="Dump Truck">
+                    <p>Articulated Dump Truck - ZAR 6,000/day</p>
+                    <button onclick="rentNow('Mini Excavator', '2500', 'images/bulldozer-5558681.jpg')">
+                        <i class="fas fa-shopping-cart"></i> Rent Now
+                    </button>
+                </div>
+                <div class="equipment-item" data-category="dump-truck">
+                    <img src="img/dump-truck.jpg" alt="Dump Truck">
+                    <p>Standard Dump Truck - ZAR 5,200/day</p>
+                    <button onclick="rentNow('Mini Excavator', '2500', 'images/bulldozer-5558681.jpg')">
+                        <i class="fas fa-shopping-cart"></i> Rent Now
+                    </button>
+                </div>
+                
+                <!-- Compactors -->
+                <div class="equipment-item" data-category="compactor">
+                    <img src="./images/istockphoto-1196245842-612x612.jpg" alt="Compactor">
+                    <p>Vibratory Roller - ZAR 2,200/day</p>
+                    <button onclick="rentNow('Mini Excavator', '2500', 'images/bulldozer-5558681.jpg')">
+                        <i class="fas fa-shopping-cart"></i> Rent Now
+                    </button>
+                </div>
+                <div class="equipment-item" data-category="compactor">
+                    <img src="./images/istockphoto-1183634632-612x612.jpg" alt="Compactor">
+                    <p>Padfoot Roller - ZAR 2,800/day</p>
+                    <button onclick="rentNow('Mini Excavator', '2500', 'images/bulldozer-5558681.jpg')">
+                        <i class="fas fa-shopping-cart"></i> Rent Now
+                    </button>
+                </div>
+                
+                <!-- Generators -->
+                <div class="equipment-item" data-category="generator">
+                    <img src="./images/isolated-4628420_1280.jpg" alt="Generator">
+                    <p>Portable Generator - ZAR 1,200/day</p>
+                    <button onclick="rentNow('Mini Excavator', '2500', 'images/bulldozer-5558681.jpg')">
+                        <i class="fas fa-shopping-cart"></i> Rent Now
+                    </button>
+                </div>
+                <div class="equipment-item" data-category="generator">
+                    <img src="./images/generator-5476642_1280.jpg" alt="Generator">
+                    <p>Industrial Generator - ZAR 3,500/day</p>
+                    <button onclick="rentNow('Mini Excavator', '2500', 'images/bulldozer-5558681.jpg')">
+                        <i class="fas fa-shopping-cart"></i> Rent Now
+                    </button>
+                </div>
+                
+                <!-- Scaffolding -->
+              
+                <div class="equipment-item" data-category="scaffolding">
+                    <img src="./images/scaffolding-595608_1280.jpg" alt="Scaffolding">
+                    <p>Modular Scaffolding - ZAR 800/day</p>
+                    <button onclick="rentNow('Mini Excavator', '2500', 'images/bulldozer-5558681.jpg')">
+                        <i class="fas fa-shopping-cart"></i> Rent Now
+                    </button>
+                </div>
+                
+                <!-- Concrete Equipment -->
+                <div class="equipment-item" data-category="concrete">
+                    <img src="img/concrete-mixer.jpg" alt="Concrete Mixer">
+                    <p>Concrete Mixer - ZAR 1,500/day</p>
+                    <button onclick="rentNow('Mini Excavator', '2500', 'images/bulldozer-5558681.jpg')">
+                        <i class="fas fa-shopping-cart"></i> Rent Now
+                    </button>
+                </div>
+
+                <div class="equipment-item" data-category="concrete">
+                    <img src="img/concrete-pump.jpg" alt="Concrete Pump">
+                    <p>Concrete Pump - ZAR 2,500/day</p>
+                    <button onclick="rentNow('Mini Excavator', '2500', 'images/bulldozer-5558681.jpg')">
+                        <i class="fas fa-shopping-cart"></i> Rent Now
+                    </button>
+                </div>
+                
+                <!-- Earthmoving Equipment -->
+                <div class="equipment-item" data-category="earthmoving">
+                    <img src="" alt="Grader">
+                    <p>Grader - ZAR 4,000/day</p>
+                    <button onclick="rentNow('Mini Excavator', '2500', '')">
+                        <i class="fas fa-shopping-cart"></i> Rent Now
+                    </button>
+                </div>
+                <div class="equipment-item" data-category="earthmoving">
+                    <img src="./images/istockphoto-466924569-612x612.jpg" alt="Trencher">
+                    <p>Trencher - ZAR 3,200/day</p>
+                    <button onclick="rentNow('Mini Excavator', '2500', 'images/bulldozer-5558681.jpg')">
+                        <i class="fas fa-shopping-cart"></i> Rent Now
+                    </button>
+                </div>
+                <!-- Add more items here similarly -->
+            </div>
+        </div>
+            </div>
+    
+      <!-- Footer Section -->
+      <footer>
+        <p>&copy; 2024 Equipment Rental. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('search');
+            const categoryFilter = document.getElementById('category-filter');
+            const toggleViewButton = document.getElementById('toggle-view');
+            const equipmentList = document.getElementById('equipment-list');
+        
+            let isGridView = false;
+        
+            searchInput.addEventListener('input', filterItems);
+            categoryFilter.addEventListener('change', filterItems);
+            toggleViewButton.addEventListener('click', toggleView);
+        
+            function filterItems() {
+                const searchTerm = searchInput.value.toLowerCase();
+                const category = categoryFilter.value.toLowerCase();
+        
+                Array.from(equipmentList.children).forEach(item => {
+                    const text = item.textContent.toLowerCase();
+                    const itemCategory = item.getAttribute('data-category').toLowerCase();
+        
+                    if (text.includes(searchTerm) && (category === '' || itemCategory === category)) {
+                        item.style.display = '';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            }
+        
+            function toggleView() {
+                isGridView = !isGridView;
+                equipmentList.className = isGridView ? 'grid-view' : 'list-view';
+                toggleViewButton.textContent = isGridView ? 'Switch to List View' : 'Switch to Grid View';
+            }
+        });
+        function rentNow(name, price, image) {
+    const encodedName = encodeURIComponent(name);
+    const encodedPrice = encodeURIComponent(price);
+    const encodedImage = encodeURIComponent(image);
+    const url = `rent.html?name=${encodedName}&price=${encodedPrice}&image=${encodedImage}`;
+    window.location.href = url;}
+
+    document.getElementById('toggle-view').addEventListener('click', function() {
+    const equipmentList = document.getElementById('equipment-list');
+    equipmentList.classList.toggle('list-view');
+    equipmentList.classList.toggle('grid-view');
+    this.innerHTML = equipmentList.classList.contains('list-view') 
+        ? '<i class="fas fa-th"></i> Grid View' 
+        : '<i class="fas fa-bars"></i> List View';
+});
+
+    </script>
+    
+</body>
+</html>
+<style>
+    
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px; /* Adjust logo size */
+    height: auto;
+    margin-right: 10px; /* Space between logo and company name */
+}
+
+.company-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333; /* Adjust the color as needed */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: #fd0d0d;
+    padding: 10px 20px;
+    position: relative;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-menu li {
+    margin: 0 15px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-menu a:hover {
+    background-color: #0056b3;
+    color: #f8f9fa;
+}
+   .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c3e50;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+header input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    flex: 1;
+    margin-right: 15px;
+}
+
+.filters label {
+    color: #fff;
+    margin-right: 10px;
+}
+
+.filters select {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+#toggle-view {
+    background-color: #27ae60;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#toggle-view i {
+    margin-right: 5px;
+}
+
+#equipment-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.equipment-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.equipment-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.equipment-item p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.equipment-item button {
+    background-color: #2980b9;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.equipment-item button i {
+    margin-right: 5px;
+}
+
+.equipment-item:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+    
+.equipment-item{
+ 
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+   
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color:#ff0000c0 ;
+    color: #fff;
+}
+
+footer {
+        background-color: #ff0000c0;
+        color: #fff;
+        text-align: center;
+        padding: 15px 20px;
+        margin-top: 20px;
+    }
+
+</style>
